@@ -7,7 +7,7 @@ alter table public.bus_sync_users
     check (role in ('bus_ic', 'control_room_ic', 'depot_ic', 'ngo_ic', 'guard')),
   add constraint bus_sync_users_assignment_check
     check (
-      (role = 'bus_ic' and bus_number between 1 and 10)
+      (role = 'bus_ic' and bus_number is not null and bus_number between 1 and 10)
       or (role <> 'bus_ic' and bus_number is null)
     );
 
