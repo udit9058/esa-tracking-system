@@ -1,0 +1,2 @@
+[functions.bus-telemetry]
+verify_jwt = false
