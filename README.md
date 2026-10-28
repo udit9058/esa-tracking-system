@@ -34,7 +34,7 @@ do not receive direct table permissions or the service-role key.
 3. Deploy `supabase/functions/bus-telemetry`:
 
    ```sh
-   npx supabase functions deploy bus-telemetry --project-ref YOUR_PROJECT_REF
+   npx supabase functions deploy bus-telemetry --project-ref YOUR_PROJECT_REF --no-verify-jwt
    ```
 
 The function's JWT verification is disabled in `supabase/config.toml` because

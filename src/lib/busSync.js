@@ -31,7 +31,7 @@ async function invokeBusTelemetry(body, accessToken) {
     }
     if (!(response instanceof Response)) {
       throw new Error(
-        'Could not connect to the secure sign-in service. Check your connection or contact the portal administrator.'
+        'Could not reach the bus-telemetry Edge Function. Netlify does not deploy Supabase functions: deploy bus-telemetry to the same Supabase project configured in Netlify (VITE_SUPABASE_URL), then try signing in again.'
       );
     }
     throw new Error(error.message);
